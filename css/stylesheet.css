@@ -19,34 +19,83 @@ body {
     background: #f8f8f8;
 }
 
-button {
-    background-color: #ffffff;
-    border: #ffffff;
-    padding: 0;
-    position: relative;
-}
-
 ul,
 li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #7e7e82;
+    display: block;
+    padding: 8px 16px;
+}
+
 .header {
-    height: 88px;
-}
-
-.main {
-    background: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
-
-.navigation-bar {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    background: #fff;
-    border-bottom: 1px solid #d9fff5;
+}
+
+.header__pink-circle {
+    width: 40px;
+    height: 40px;
+    background: #ff3e79;
+    position: relative;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.header__pink-circle:hover {
+    cursor: pointer;
+}
+
+.check-status>img,
+.repair>img,
+.profile>img,
+.chat>img,
+.contact>img,
+.burger>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+}
+
+.contact>img {
+    width: 18px;
+    height: 18px;
+}
+
+.profile>img {
+    width: 20px;
+    height: 18px;
+}
+
+.repair>img,
+.chat>img {
+    width: 20px;
+    height: 20px;
+}
+
+.check-status>img {
+    width: 16px;
+    height: 20px;
+}
+
+.burger::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: -40px;
+    width: 32px;
+    height: 2px;
+    background: #eaeaea;
+    transform: rotate(90deg);
 }
 
 .title__heading {
@@ -102,7 +151,7 @@ li {
     text-align: center;
     color: #7e7e82;
     width: 320px;
-    padding: 8px 16px;
+
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -144,43 +193,6 @@ li {
         display: flex;
         padding-bottom: 16px;
         padding-left: 16px;
-    }
-
-    .navigation-bar__menu-icon {
-        padding-right: 16px;
-        padding-left: 16px;
-    }
-
-    .navigation-bar__cps-logo {
-        padding: 18px 16px 18px 0;
-    }
-
-    .navigation-bar__divider1 {
-        display: none;
-    }
-
-    .navigation-bar__divider2 {
-        padding-right: 20px;
-    }
-
-    .navigation-bar__contact-icon {
-        display: none;
-    }
-
-    .navigation-bar__repair-icon {
-        padding-right: 16px;
-    }
-
-    .navigation-bar__chat-icon {
-        display: none;
-    }
-
-    .navigation-bar__profile-icon {
-        display: none;
-    }
-
-    .navigation-bar__divider3 {
-        display: none;
     }
 
     .title__nav {
@@ -227,45 +239,7 @@ li {
         display: flex;
     }
 
-    .navigation-bar__menu-icon {
-        padding-right: 20px;
-        padding-left: 24px;
-    }
 
-    .navigation-bar__cps-logo {
-        padding: 18px 250px 18px 0;
-    }
-
-    .navigation-bar__contact-icon {
-        display: block;
-        padding-right: 16px;
-
-    }
-
-    .navigation-bar__chat-icon {
-        display: block;
-        padding-right: 16px;
-    }
-
-    .navigation-bar__profile-icon {
-        display: block;
-        padding-right: 20px;
-    }
-
-    .navigation-bar__divider1 {
-        display: block;
-        padding-right: 20px;
-    }
-
-
-    .navigation-bar__divider2 {
-        display: none;
-    }
-
-    .navigation-bar__divider3 {
-        display: block;
-        padding-right: 20px;
-    }
 
     .subtitle__text--small {
         display: none;
@@ -303,7 +277,9 @@ li {
 
 @media (min-width: 1120px) {
 
-
+    .header {
+        display: none;
+    }
 
     .title__heading {
         padding-top: 24px;
@@ -344,9 +320,6 @@ li {
         justify-content: space-between;
     }
 
-    .header {
-        display: none;
-    }
 
     .title {
         display: flex;
@@ -360,21 +333,14 @@ li {
         padding-top: 24px;
     }
 
-    .title__nav--title1 {
+    .title__nav--text1 {
         margin-left: 449px;
         padding-right: 8px;
     }
 
-    .title__nav--title2 {
-        padding-right: 32px;
-    }
-
-    .title__nav--title3 {
+    .title__nav--text2 {
+        padding-left: 32px;
         padding-right: 8px;
-    }
-
-    .title__nav--title4 {
-        padding-right: 32px;
     }
 
     .image--media-size {
