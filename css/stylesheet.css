@@ -44,7 +44,6 @@ a {
 .header__pink-circle:hover {
     cursor: pointer;
     box-shadow: 3px 3px 6px #0dc501;
-    background: ;
 }
 
 .header__pink-circle:active {
@@ -325,7 +324,6 @@ div[hidden] {
     .subtitle__text--large {
         display: none;
     }
-
     .subtitle {
         display: flex;
         flex-wrap: wrap;
